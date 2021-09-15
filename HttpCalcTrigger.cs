@@ -14,7 +14,7 @@ namespace liam.calc
     public static class HttpCalcTrigger
     {
         [FunctionName("HttpCalcTrigger")]
-        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log)
+        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, ILogger log)
         {
             string[] numbers = req.Query["numbers"].ToString().Split(' ');
             try
